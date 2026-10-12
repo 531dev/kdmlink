@@ -218,7 +218,11 @@ function compareSemver(a, b) {
 }
 
 function git(...args) {
-  return execFileSync("git", args, { cwd: repoRoot, encoding: "utf8" });
+  return execFileSync("git", args, {
+    cwd: repoRoot,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"],
+  });
 }
 
 async function checkVersionBumps(baseRef, manifest) {
