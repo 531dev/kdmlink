@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "version": "1.0.9",
+  "id": "hyundai.kona_n.2022-2023.dct",
+  "name": "Hyundai Kona N DCT",
+  "years": "2022-2023",
+  "transmission": "dct",
+  "notes": "Calibrated from KONA N DCT CAN capture 2026-06-04. Uses 0x366 for RPM/speed, 0x453 for intake temp, 0x368 for DCT gear. 1.0.6: FuelLevel corrected to the full 16-bit 0x50C D3:D4 sender counts — the 1.0.5 D3-only liters read wraps mod 256 (108% at a full tank, 0%/255 mid-drain). 1.0.5 (published from main) added BatteryVoltage + TPMS. 1.0.7: power/torque enabled - EMS16 TQI (0x260 D1) x0.390625 with referenceTorqueNm 500 (TQ_STND, constant on 0x329 mux 3) and staticFrictionTorquePct 6.5 (no TQFR on this gateway). 1.0.8: rpm-dependent frictionTorqueCurve added (measured live TQFR 4.7%@2750 to 11.7%@5700 on the 2026-08-02 VN MT WOT capture, same G4KH engine; 6800 rpm tail point extrapolated) - flat 6.5% overstated top-end power by ~5%. staticFrictionTorquePct kept as fallback for older apps. powerGaugeMaxHp 360.",
+  "signals": [
+    {
+      "name": "CurrentGear",
+      "canId": 872,
+      "startBit": 32,
+      "bitLength": 4,
+      "isBigEndian": false,
+      "isSigned": false,
+      "factor": 1.0,
+      "offset": 0.0,
+      "minValue": 0.0,
+      "maxValue": 14.0,
+      "unit": "",
+      "description": "DCT gear position from CAN 0x368 byte[4] low nibble (0=P/N, 1-3=Forward, 14=Reverse)."
+    }
+  ]
+}

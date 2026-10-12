@@ -1,0 +1,35 @@
+name: Wrong or missing reading
+description: A value in the app looks wrong, is stuck, or never shows up.
+labels: [decode-bug]
+body:
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle
+      placeholder: 2023 Elantra N DCT, US
+    validations:
+      required: true
+  - type: input
+    id: signal
+    attributes:
+      label: Which reading?
+      placeholder: Fuel level / Boost / Gear …
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What you see vs. what you expected
+      description: Include the reference you compared against (cluster, OBD scanner, gauge…).
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: App version and vehicle data version
+      description: Settings → Vehicle Data shows the config version.
+  - type: textarea
+    id: capture
+    attributes:
+      label: Capture
+      description: Attach a KDMLink recording (Settings → CAN Bus Recorder) or a candump log taken while the problem was happening, if you can.

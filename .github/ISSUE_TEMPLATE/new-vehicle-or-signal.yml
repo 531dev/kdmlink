@@ -1,0 +1,25 @@
+name: New vehicle or signal
+description: Propose decoding a new signal, or support for a new car.
+labels: [new-signal]
+body:
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle
+      placeholder: 2024 Kona N DCT, KDM
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want decoded?
+      description: Signal name and, if you know it, the CAN ID / bytes / scaling and where that came from.
+    validations:
+      required: true
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I can record captures from this car
+        - label: I can do the decoding work and open a PR

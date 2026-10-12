@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mohamadSherif/kdmlink-vehicle-data/schema/layer.schema.json",
+  "title": "KDMLink vehicle config layer",
+  "description": "One layer of a vehicle config (common.json, base.json or a transmission leaf). Editor hints only; scripts/validate.mjs is the source of truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Leaf files only. Bump on ANY change to this leaf or a layer it inherits from."
+    },
+    "id": { "type": "string", "description": "Leaf files only, e.g. hyundai.veloster_n.2019-2022.dct" },
+    "name": { "type": "string" },
+    "make": { "type": "string" },
+    "model": { "type": "string" },
+    "years": { "type": "string" },
+    "transmission": { "type": "string" },
+    "displayName": { "type": "string" },
+    "notes": { "type": "string", "description": "Changelog: one sentence per version explaining what changed and why." },
+    "release_notes": { "type": "string" },
+    "min_app_version": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "make": { "type": "string" },
+        "model": { "type": "string" },
+        "displayName": { "type": "string" },
+        "supportsPowerTorque": { "type": "boolean" },
+        "referenceTorqueNm": { "type": "number" },
+        "powerGaugeMaxHp": { "type": "number" },
+        "staticFrictionTorquePct": { "type": "number" },
+        "frictionTorqueCurve": {
+          "type": "array",
+          "description": "[[rpm, frictionPct], ...] with increasing rpm",
+          "items": { "type": "array", "prefixItems": [{ "type": "number" }, { "type": "number" }], "minItems": 2, "maxItems": 2 }
+        }
+      }
+    },
+    "signals": { "type": "array", "items": { "$ref": "#/$defs/signal" } },
+    "removeSignals": {
+      "type": "array",
+      "description": "Drop signals inherited from a parent layer.",
+      "items": {
+        "oneOf": [
+          { "type": "string", "description": "Signal name (only when it exists on a single CAN ID)" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "canId"],
+            "properties": { "name": { "type": "string" }, "canId": { "type": "integer" } }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "canId", "startBit", "bitLength", "description"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$", "description": "Name the app keys on. Reuse an existing name to override it." },
+        "canId": { "type": "integer", "minimum": 0, "maximum": 2047, "description": "11-bit CAN ID in DECIMAL (0x316 = 790)." },
+        "startBit": { "type": "integer", "minimum": 0, "maximum": 63, "description": "Little-endian: LSB position (byte*8 + bit). Big-endian: MSB position." },
+        "bitLength": { "type": "integer", "minimum": 1, "maximum": 32 },
+        "isBigEndian": { "type": "boolean", "default": false },
+        "isSigned": { "type": "boolean", "default": false },
+        "factor": { "type": "number", "default": 1 },
+        "offset": { "type": "number", "default": 0 },
+        "minValue": { "type": "number", "default": 0, "description": "Samples outside min..max are dropped. 0/0 = no range check." },
+        "maxValue": { "type": "number", "default": 0 },
+        "unit": { "type": "string" },
+        "description": { "type": "string", "description": "Which bytes/bits, and how it was validated (capture date, reference tool, confidence)." },
+        "valueMap": {
+          "type": "object",
+          "description": "Raw integer -> physical value lookup; takes precedence over factor/offset.",
+          "patternProperties": { "^-?\\d+$": { "type": "number" } },
+          "additionalProperties": false
+        },
+        "ignoredRawValues": { "type": "array", "items": { "type": "integer" }, "description": "Raw values treated as 'no data'." }
+      }
+    }
+  }
+}

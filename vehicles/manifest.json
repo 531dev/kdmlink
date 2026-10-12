@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "vehicles": [
+    {
+      "id": "hyundai.veloster_n.2019-2022.manual",
+      "displayName": "Hyundai Veloster N MT",
+      "make": "Hyundai",
+      "model": "Veloster N",
+      "years": "2019-2022",
+      "transmission": "manual",
+      "tags": []
+    },
+    {
+      "id": "hyundai.veloster_n.2019-2022.dct",
+      "displayName": "Hyundai Veloster N DCT",
+      "make": "Hyundai",
+      "model": "Veloster N",
+      "years": "2019-2022",
+      "transmission": "dct",
+      "tags": []
+    },
+    {
+      "id": "hyundai.elantra_n.2022-2026.manual",
+      "displayName": "Hyundai Elantra N MT",
+      "make": "Hyundai",
+      "model": "Elantra N",
+      "years": "2022-2026",
+      "transmission": "manual",
+      "tags": ["experimental"]
+    },
+    {
+      "id": "hyundai.elantra_n.2022-2026.dct",
+      "displayName": "Hyundai Elantra N DCT",
+      "make": "Hyundai",
+      "model": "Elantra N",
+      "years": "2022-2026",
+      "transmission": "dct",
+      "tags": ["experimental"]
+    },
+    {
+      "id": "hyundai.kona_n.2022-2023.dct",
+      "displayName": "Hyundai Kona N DCT",
+      "make": "Hyundai",
+      "model": "Kona N",
+      "years": "2022-2023",
+      "transmission": "dct",
+      "tags": []
+    }
+  ]
+}
