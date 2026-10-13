@@ -30,4 +30,4 @@ You don't need to know anything about CAN to help. [Open an issue](../../issues/
 
 PRs need passing CI and a maintainer review. Merging does **not** ship to the app straight away: maintainers publish vehicle data releases separately, after testing.
 
-By contributing you agree that your changes are licensed under CC BY-SA 4.0 (data and docs) or MIT (scripts).
+By contributing you agree that your changes are licensed under CC BY-SA 4.0 (data, specs and docs) or MIT (scripts).
