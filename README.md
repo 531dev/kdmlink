@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.png" alt="KDMLink" width="100%">
+</p>
+
 # KDMLink Vehicle Data
 
 Open CAN bus signal definitions for Hyundai N performance cars: which CAN ID, which bits, and what scaling turn raw C-CAN traffic into RPM, boost, gear, fuel level, tire pressures, N Mode settings and more.
