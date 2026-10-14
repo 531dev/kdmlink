@@ -26,7 +26,7 @@
       "model": "Elantra N",
       "years": "2022-2026",
       "transmission": "manual",
-      "tags": ["experimental"]
+      "tags": []
     },
     {
       "id": "hyundai.elantra_n.2022-2026.dct",
@@ -35,7 +35,7 @@
       "model": "Elantra N",
       "years": "2022-2026",
       "transmission": "dct",
-      "tags": ["experimental"]
+      "tags": []
     },
     {
       "id": "hyundai.kona_n.2022-2023.dct",
@@ -45,6 +45,33 @@
       "years": "2022-2023",
       "transmission": "dct",
       "tags": []
+    },
+    {
+      "id": "hyundai.i30_n.2017-2025.manual",
+      "displayName": "Hyundai i30 N MT",
+      "make": "Hyundai",
+      "model": "i30 N",
+      "years": "2017-2025",
+      "transmission": "manual",
+      "tags": ["experimental"]
+    },
+    {
+      "id": "hyundai.i30_n.2017-2025.dct",
+      "displayName": "Hyundai i30 N DCT",
+      "make": "Hyundai",
+      "model": "i30 N",
+      "years": "2017-2025",
+      "transmission": "dct",
+      "tags": ["experimental"]
+    },
+    {
+      "id": "hyundai.i20_n.2021-2024.manual",
+      "displayName": "Hyundai i20 N MT",
+      "make": "Hyundai",
+      "model": "i20 N",
+      "years": "2021-2024",
+      "transmission": "manual",
+      "tags": ["experimental"]
     }
   ]
 }

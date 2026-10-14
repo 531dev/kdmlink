@@ -19,8 +19,10 @@ The KDMLink device is a transparent pipe: it streams raw CAN frames over BLE and
 | Vehicle | Years | Transmissions | Status |
 |---------|-------|---------------|--------|
 | Hyundai Veloster N | 2019–2022 | MT, DCT | Stable |
-| Hyundai Elantra N | 2022–2026 | MT, DCT | Experimental |
+| Hyundai Elantra N | 2022–2026 | MT, DCT | Stable |
 | Hyundai Kona N | 2022–2023 | DCT | Stable |
+| Hyundai i30 N | 2017–2025 | MT, DCT | Experimental: uses the Veloster N definitions, not yet validated on an i30 N |
+| Hyundai i20 N | 2021–2024 | MT | Experimental: uses the Veloster N definitions, not yet validated on an i20 N; power/torque disabled |
 
 ## Vehicle data layout
 
@@ -64,6 +66,7 @@ Corrections and new signals are very welcome, especially from owners with access
 
 - **Yaw rate** on Veloster N DCT and Kona N: the signed/offset encoding is unconfirmed, so range checking is disabled.
 - **2024+ Elantra N fuel level**: facelift cars may use a different sender range than earlier ones.
+- **i30 N and i20 N captures**: both currently reuse the Veloster N definitions. A short drive from either car (ideally with a full-throttle pull) would confirm or correct them, and would let i20 N power/torque be calibrated for its 1.6T engine.
 - **Kia Stinger GT and other platforms**: no configs exist yet.
 
 ## License
