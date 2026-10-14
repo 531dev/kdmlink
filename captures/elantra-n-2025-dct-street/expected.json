@@ -1,0 +1,374 @@
+{
+  "capture": "capture.csv.gz",
+  "vehicle": "hyundai.elantra_n.2022-2026.dct",
+  "checkpoints": [
+    {
+      "atMs": 5000,
+      "label": "Parked, idling",
+      "values": {
+        "EngineRPM_2": 712,
+        "VehicleSpeed": 0,
+        "CurrentGear": 0,
+        "AccelPedalPos": 0,
+        "BoostPressurePsi": -0.047,
+        "CoolantTemp": 81.75,
+        "OilTemp": 77,
+        "BatteryVoltage": 13.4,
+        "Odometer": 32923.9
+      },
+      "signals": [
+        "EngineRPM_2",
+        "VehicleSpeed",
+        "CurrentGear",
+        "AccelPedalPos",
+        "BoostPressurePsi",
+        "CoolantTemp",
+        "OilTemp",
+        "BatteryVoltage",
+        "Odometer"
+      ]
+    },
+    {
+      "atMs": 16700,
+      "label": "Reverse engaged",
+      "values": {
+        "EngineRPM_2": 735,
+        "VehicleSpeed": 0,
+        "CurrentGear": 14,
+        "AccelPedalPos": 0,
+        "BoostPressurePsi": -0.047,
+        "SteeringAngle": -2.7
+      },
+      "signals": [
+        "EngineRPM_2",
+        "VehicleSpeed",
+        "CurrentGear",
+        "AccelPedalPos",
+        "BoostPressurePsi",
+        "SteeringAngle"
+      ]
+    },
+    {
+      "atMs": 144681,
+      "label": "Full-throttle pull, peak boost",
+      "values": {
+        "EngineRPM_2": 5209,
+        "VehicleSpeed": 87,
+        "CurrentGear": 3,
+        "AccelPedalPos": 99.6079,
+        "ThrottlePosition": 74.2769,
+        "BoostPressurePsi": 18.2066,
+        "ManifoldPressureHiRes": 226.8552,
+        "EngineTorqueActualPct": 74.6094
+      },
+      "signals": [
+        "EngineRPM_2",
+        "VehicleSpeed",
+        "CurrentGear",
+        "AccelPedalPos",
+        "ThrottlePosition",
+        "BoostPressurePsi",
+        "ManifoldPressureHiRes",
+        "EngineTorqueActualPct"
+      ]
+    },
+    {
+      "atMs": 147700,
+      "label": "Top speed",
+      "values": {
+        "EngineRPM_2": 6045,
+        "VehicleSpeed": 116,
+        "VehicleSpeedMph": 75,
+        "CurrentGear": 3,
+        "AccelPedalPos": 0,
+        "BoostPressurePsi": 14.3718
+      },
+      "signals": [
+        "EngineRPM_2",
+        "VehicleSpeed",
+        "VehicleSpeedMph",
+        "CurrentGear",
+        "AccelPedalPos",
+        "BoostPressurePsi"
+      ]
+    }
+  ],
+  "configVersion": "2.0.7",
+  "frames": 712741,
+  "canIds": 88,
+  "durationMs": 348826,
+  "signals": {
+    "AccelPedalPos": {
+      "samples": 27391,
+      "dropped": 0,
+      "min": 0,
+      "max": 99.6079,
+      "first": 0,
+      "last": 0
+    },
+    "AcceleratorPedal": {
+      "samples": 27391,
+      "dropped": 0,
+      "min": 0.64,
+      "max": 94.62,
+      "first": 0.64,
+      "last": 0.64
+    },
+    "AmbientTemp": {
+      "samples": 5508,
+      "dropped": 0,
+      "min": 29,
+      "max": 29,
+      "first": 29,
+      "last": 29
+    },
+    "BatteryVoltage": {
+      "samples": 2705,
+      "dropped": 0,
+      "min": 13,
+      "max": 13.5,
+      "first": 13.4,
+      "last": 13.3
+    },
+    "BoostPressurePsi": {
+      "samples": 5508,
+      "dropped": 0,
+      "min": -0.4688,
+      "max": 18.2066,
+      "first": -0.047,
+      "last": -0.047
+    },
+    "BrakePressure": {
+      "samples": 27159,
+      "dropped": 0,
+      "min": 0,
+      "max": 58.4,
+      "first": 0,
+      "last": 0
+    },
+    "CoolantTemp": {
+      "samples": 27391,
+      "dropped": 0,
+      "min": 81,
+      "max": 93,
+      "first": 81,
+      "last": 91.5
+    },
+    "CurrentGear": {
+      "samples": 26896,
+      "dropped": 0,
+      "min": 0,
+      "max": 14,
+      "first": 0,
+      "last": 0
+    },
+    "DriveMode_WithN": {
+      "samples": 2723,
+      "dropped": 0,
+      "min": 16,
+      "max": 16,
+      "first": 16,
+      "last": 16
+    },
+    "EngineRPM_2": {
+      "samples": 26949,
+      "dropped": 0,
+      "min": 682,
+      "max": 6443,
+      "first": 705,
+      "last": 754
+    },
+    "EngineTorqueActualPct": {
+      "samples": 27412,
+      "dropped": 0,
+      "min": 0,
+      "max": 78.5156,
+      "first": 6.25,
+      "last": 7.0313
+    },
+    "FuelLevel": {
+      "samples": 2723,
+      "dropped": 0,
+      "min": 79.4329,
+      "max": 80.0369,
+      "first": 80.0369,
+      "last": 79.4329
+    },
+    "IntakeTemp": {
+      "samples": 13733,
+      "dropped": 0,
+      "min": 49.5,
+      "max": 55.5,
+      "first": 55.5,
+      "last": 51
+    },
+    "LateralAccel": {
+      "samples": 1353,
+      "dropped": 0,
+      "min": -0.2845,
+      "max": 0.5022,
+      "first": 0.0194,
+      "last": 0.0112
+    },
+    "LongAccel": {
+      "samples": 1353,
+      "dropped": 0,
+      "min": -0.3384,
+      "max": 0.378,
+      "first": 0.018,
+      "last": 0.0252
+    },
+    "ManifoldPressureHiRes": {
+      "samples": 5508,
+      "dropped": 0,
+      "min": 98.0924,
+      "max": 226.8552,
+      "first": 101.0008,
+      "last": 101.0008
+    },
+    "Odometer": {
+      "samples": 268,
+      "dropped": 0,
+      "min": 32923.9,
+      "max": 32926.8,
+      "first": 32923.9,
+      "last": 32926.8
+    },
+    "OilTemp": {
+      "samples": 5508,
+      "dropped": 0,
+      "min": 77,
+      "max": 89,
+      "first": 77,
+      "last": 89
+    },
+    "SpeedUnit": {
+      "samples": 13717,
+      "dropped": 0,
+      "min": 1,
+      "max": 1,
+      "first": 1,
+      "last": 1
+    },
+    "SteeringAngle": {
+      "samples": 27254,
+      "dropped": 0,
+      "min": -396.5,
+      "max": 393.4,
+      "first": -2.7,
+      "last": 9.7
+    },
+    "SteeringSpeed": {
+      "samples": 27254,
+      "dropped": 0,
+      "min": 0,
+      "max": 400,
+      "first": 0,
+      "last": 0
+    },
+    "TPMS_FL": {
+      "samples": 1379,
+      "dropped": 0,
+      "min": 35,
+      "max": 255,
+      "first": 255,
+      "last": 36
+    },
+    "TPMS_FR": {
+      "samples": 1379,
+      "dropped": 0,
+      "min": 36,
+      "max": 255,
+      "first": 255,
+      "last": 37
+    },
+    "TPMS_RL": {
+      "samples": 1379,
+      "dropped": 0,
+      "min": 35,
+      "max": 255,
+      "first": 255,
+      "last": 35
+    },
+    "TPMS_RR": {
+      "samples": 1379,
+      "dropped": 0,
+      "min": 34,
+      "max": 255,
+      "first": 255,
+      "last": 35
+    },
+    "ThrottlePosition": {
+      "samples": 27391,
+      "dropped": 0,
+      "min": 4.138,
+      "max": 74.6173,
+      "first": 4.138,
+      "last": 4.138
+    },
+    "TurboPressure": {
+      "samples": 5508,
+      "dropped": 0,
+      "min": 98.0924,
+      "max": 226.8552,
+      "first": 101.0008,
+      "last": 101.0008
+    },
+    "VehicleSpeed": {
+      "samples": 26949,
+      "dropped": 0,
+      "min": 0,
+      "max": 116,
+      "first": 0,
+      "last": 0
+    },
+    "VehicleSpeedMph": {
+      "samples": 13717,
+      "dropped": 0,
+      "min": 0,
+      "max": 76.5,
+      "first": 0,
+      "last": 0
+    },
+    "WheelSpeed_FL": {
+      "samples": 13749,
+      "dropped": 0,
+      "min": 0,
+      "max": 122.5,
+      "first": 0,
+      "last": 0
+    },
+    "WheelSpeed_FR": {
+      "samples": 13749,
+      "dropped": 0,
+      "min": 0,
+      "max": 122.4375,
+      "first": 0,
+      "last": 0
+    },
+    "WheelSpeed_RL": {
+      "samples": 13749,
+      "dropped": 0,
+      "min": 0,
+      "max": 121.9375,
+      "first": 0,
+      "last": 0
+    },
+    "WheelSpeed_RR": {
+      "samples": 13749,
+      "dropped": 0,
+      "min": 0,
+      "max": 122.3125,
+      "first": 0,
+      "last": 0
+    },
+    "YawRate": {
+      "samples": 27159,
+      "dropped": 0,
+      "min": -20.47,
+      "max": 20.47,
+      "first": -0.01,
+      "last": -0.05
+    }
+  }
+}

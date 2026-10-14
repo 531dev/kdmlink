@@ -183,7 +183,7 @@ Refreshed once per second; read it on demand. The device also sends a notificati
 
 ### 6.3 Firmware update (OTA)
 
-Images are ESP32-S3 app binaries. Each update must state the image's SHA-256, and an image that doesn't match it is rejected. A failed boot rolls back to the previous image.
+Images are ESP32 application binaries (ESP-IDF app image, not a full flash image). Each update must state the image's SHA-256, and an image that doesn't match it is rejected. A failed boot rolls back to the previous image.
 
 1. Subscribe to **OTA Data** notifications.
 2. Command `0xF0` ENTER_OTA. Telemetry stops; the device notifies status phase `READY`.

@@ -20,6 +20,8 @@ jobs:
           node-version: 22
       - name: Validate configs
         run: node scripts/validate.mjs
+      - name: Check decoded values on real captures
+        run: node scripts/check-captures.mjs
       - name: Require version bumps
         if: github.event_name == 'pull_request'
         run: node scripts/validate.mjs --base origin/${{ github.base_ref }}

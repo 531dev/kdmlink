@@ -16,8 +16,9 @@ You don't need to know anything about CAN to help. [Open an issue](../../issues/
    node scripts/decode.mjs hyundai.elantra_n.2022-2026.dct my_drive.csv --signals FuelLevel
    node scripts/validate.mjs
    ```
-5. **Bump the version** in every affected leaf and add a sentence to its `notes` (see [Versioning](docs/FORMAT.md#versioning)).
-6. **Open a PR** with the capture and reference attached. The template walks you through it.
+5. **Re-check the reference captures:** `node scripts/check-captures.mjs`. If your change intentionally alters decoded values, run it with `--update` and say in the PR which values moved and why.
+6. **Bump the version** in every affected leaf and add a sentence to its `notes` (see [Versioning](docs/FORMAT.md#versioning)).
+7. **Open a PR** with the capture and reference attached. The template walks you through it.
 
 ## What makes a good decode
 

@@ -10,6 +10,7 @@ Open standards for KDMLink: **how to decode Hyundai N CAN traffic** and **how to
 |---|------|-------|
 | 🚗 | **Vehicle data**: which CAN ID, which bits and what scaling turn raw C-CAN traffic into RPM, boost, gear, fuel level, tire pressures, N Mode settings and more | [`vehicles/`](vehicles) · [format](docs/FORMAT.md) |
 | 📡 | **BLE protocol**: discovery, pairing, the telemetry stream, commands and OTA for the KDMLink device | [`protocol/BLE.md`](protocol/BLE.md) |
+| 🧪 | **Test captures**: real drives in KDMLink CSV, candump, Vector ASC and PCAN TRC formats, with expected decoded values, for replaying on a bench or testing a decoder | [`captures/`](captures) |
 
 The KDMLink device is a transparent pipe: it streams raw CAN frames over BLE and does no decoding itself. The [KDMLink app](https://www.kdmlink.com) decodes those frames with the JSON in this repo, so an improvement merged here reaches every KDMLink user with the next vehicle data release. The same two documents are everything you need to build your own app, logger or dashboard on top of KDMLink hardware.
 
@@ -52,6 +53,7 @@ Requires Node 20+. There are no dependencies to install.
 node scripts/validate.mjs                                   # check everything (CI runs this)
 node scripts/decode.mjs --list hyundai.kona_n.2022-2023.dct # list a car's signals
 node scripts/decode.mjs hyundai.kona_n.2022-2023.dct capture.csv --signals EngineRPM,BoostPressurePsi
+node scripts/check-captures.mjs                             # re-decode captures/ and compare with expected values
 ```
 
 `decode.mjs` reads KDMLink recorder exports, `candump` logs and SavvyCAN CSV. It decodes exactly the way the app does, including dropping samples that fall outside `minValue`/`maxValue`.
