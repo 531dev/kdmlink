@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/mohamadSherif/kdmlink-vehicle-data/schema/layer.schema.json",
+  "$id": "https://raw.githubusercontent.com/531dev/kdmlink/main/schema/layer.schema.json",
   "title": "KDMLink vehicle config layer",
   "description": "One layer of a vehicle config (common.json, base.json or a transmission leaf). Editor hints only; scripts/validate.mjs is the source of truth.",
   "type": "object",
